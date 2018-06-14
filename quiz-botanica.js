@@ -1,6 +1,6 @@
 var currentQuestion = 0;
 var score = 0;
-var totQuestions = questions_algoritmielementari .length;
+var totQuestions = questions_vectori.length;
 
 var container = document.getElementById('quizContainer');
 var questionEl = document.getElementById('question');
@@ -12,7 +12,7 @@ var nextButton = document.getElementById('nextButton');
 var resultCont = document.getElementById('result');
 
 function loadQuestion (questionIndex) {
-	var q = questions_algoritmielementari [questionIndex];
+	var q = questions_vectori[questionIndex];
 	questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
 	opt1.textContent = q.option1;
 	opt2.textContent = q.option2;
@@ -27,7 +27,7 @@ function loadNextQuestion () {
 		return;
 	}
 	var answer = selectedOption.value;
-	if(questions_algoritmielementari [currentQuestion].answer == answer){
+	if(questions_vectori[currentQuestion].answer == answer){
 		score += 1;
 	}
 	selectedOption.checked = false;
