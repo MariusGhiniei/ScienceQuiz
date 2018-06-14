@@ -1,0 +1,745 @@
+body{
+	padding:0;
+	font-family: 'Roboto Condensed', serif;
+	margin-left:10px;
+	margin-right: 10px;
+}
+
+.nav {
+	top:-15px;
+	background-color:#595959;
+	color:#ffffff;
+	list-style:none;
+	text-align:right;
+	position:fixed;
+	width:96%;
+	margin-right:10px;
+}
+
+.navHome {
+	top:10px;
+	background-color:#595959;
+	color:#ffffff;
+	list-style:none;
+	text-align:right;
+	margin-top: -10px;
+	position: fixed;
+	width:98.5%;
+	opacity: 100%;
+
+	margin-right: 10px;
+}
+
+.navHome > li {
+	display:inline-block;
+	padding:0 25px 0 25px;
+	padding-right: 50px;
+}
+
+.navHome > li > a {
+	text-decoration:none;
+	color:#ffffff;
+}
+
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav > li {
+	display:inline-block;
+	padding:0 25px 0 25px;
+	padding-right: 50px;
+}
+
+.nav > li > a {
+	text-decoration:none;
+	color:#ffffff;
+}
+
+.dropbutton > a:hover {
+	color:#c1c1c1;
+}
+
+
+.nav > li > a:hover {
+	color:#c1c1c1;
+}
+
+.dropbutton {
+	
+	background-color:#595959;
+	color:#ffffff;
+	border:none;
+	padding:25px;
+	font-size:15px;
+	outline: none;
+}
+
+.dropdown {
+	position: relative;
+	display:inline-block;
+}
+
+.dropbutton:hover {
+	color:#c1c1c1;
+}
+
+.dropdown-content {
+	display:none;
+	position: absolute;
+	background-color:#c1c1c1;
+	min-width: 150px;
+	box-shadow: 0px 8px 16px 0px #2f2f2f;
+	z-index: 1;
+	text-align: left;
+	opacity: 1;
+}
+
+.dropdown-content a {
+	color:#575757;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color:#000000;
+}
+
+.dropdown:hover .dropdown-content {
+	display:block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #575757;
+}
+
+.home {
+	padding-left:25px;
+	font-family: 'Roboto Condensed', serif;
+}
+
+.citatbio {
+	width:99.75%;
+	height:75px;
+	background-color:#b2e196;
+	text-align:center;
+	padding: 25px 0 25px 0;
+	border-radius:40px;
+	font-size: 22px;
+}
+
+.citatfizica {
+	width: 99.75%;
+	height:75px;
+	background-color:#f1af55;
+	text-align:center;
+	padding:25px 0 25px 0;
+	border-radius: 40px;
+	font-size:25px;
+}
+
+.citatchimie {
+	width: 99.75%;
+	height:75px;
+	background-color:#76a4c7;
+	text-align:center;
+	padding:25px 0 25px 0;
+	border-radius: 40px;
+	font-size:25px;
+}
+
+.citatinformatica {
+	width:100%;
+	height:75px;
+	background-color:#81e7c6;
+	text-align:center;
+	padding:25px 0 25px 0;
+	border-radius: 40px;
+	font-size:25px;
+}
+
+.btn-biologie {
+	background-color: #65ac00;
+	color:#ffffff;
+	text-align: center;
+	border:none;
+	padding:12px;
+	font-size: 25px;
+}
+
+.btn-fizica {
+	background-color: #f28e00;
+	color:#ffffff;
+	text-align: center;
+	border:none;
+	padding: 12px;
+	font-size: 25px;
+}
+
+.btn-chimie {
+	background-color: #0066b5;
+	color:#ffffff;
+	text-align: center;
+	border:none;
+	padding: 12px;
+	font-size: 25px;
+}
+
+.btn-informatica {
+	background-color: #22b78b;
+	color:#ffffff;
+	text-align: center;
+	border:none;
+	padding: 12px;
+	font-size: 25px;
+}
+
+.shadow, .btn-biologie:hover {
+   -moz-box-shadow:    inset 0 0 10px #3f6b01;
+   -webkit-box-shadow: inset 0 0 10px #3f6b01;
+   box-shadow:         inset 0 0 15px #3f6b01;
+}
+
+.shadow, .btn-fizica:hover {
+   -moz-box-shadow:    inset 0 0 10px #105c46;
+   -webkit-box-shadow: inset 0 0 10px #105c46;
+   box-shadow:         inset 0 0 15px #105c46;
+}
+
+.shadow, .btn-chimie:hover {
+   -moz-box-shadow:    inset 0 0 10px #105c46;
+   -webkit-box-shadow: inset 0 0 10px #105c46;
+   box-shadow:         inset 0 0 15px #105c46;
+}
+
+.shadow, .btn-informatica:hover {
+   -moz-box-shadow:    inset 0 0 10px #105c46;
+   -webkit-box-shadow: inset 0 0 10px #105c46;
+   box-shadow:         inset 0 0 15px #105c46;
+}
+
+.teorie-bio{
+	text-align: left;
+	word-wrap: normal;
+	margin-bottom: 20px;
+	font-size: 17px;
+}
+#content-biologie {
+	background-color: #ffffff;
+	border:none;
+	color:#65ac00;
+	stroke: 2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-biologie2 {
+	background-color: #ffffff;
+	border:none;
+	color:#65ac00;
+	stroke: 2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-biologie3 {
+	background-color: #ffffff;
+	border:none;
+	color:#65ac00;
+	stroke: 2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-fizica {
+	background-color: #ffffff;
+	border:none;
+	color:#f28e00;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-fizica2 {
+	background-color: #ffffff;
+	border:none;
+	color:#f28e00;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-fizica3 {
+	background-color: #ffffff;
+	border:none;
+	color:#f28e00;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-chimie {
+	background-color: #ffffff;
+	border:none;
+	color:#0066b5;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-chimie2 {
+	background-color: #ffffff;
+	border:none;
+	color:#0066b5;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-chimie3 {
+	background-color: #ffffff;
+	border:none;
+	color:#0066b5;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica2 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica3 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+.content2 {
+	font-size: 15px;
+	text-align: left;
+}
+
+#content-informatica4 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica5 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica6 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica7 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica8 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica9 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica10 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica11 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica12 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica13 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica14 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+#content-informatica15 {
+	background-color: #ffffff;
+	border:none;
+	color:#22b78b;
+	stroke:2px;
+	margin-left: 50px;
+	word-break: keep-all;
+}
+
+.border {
+	border: 1px solid #22b78b;
+	border-radius: 20px;
+}
+
+.instructiuni {
+	float: left;
+    width: 23%;
+    padding: 10px;
+    height: 75%;
+    text-align: justify;
+}
+
+.pre_instructiuni{
+	display: block;
+	text-align:center;
+
+}
+
+.margin_info{
+	margin-left:0 auto;
+	margin-right:0 auto;
+	text-align:center;
+}
+
+.p_context{
+	text-align: justify;
+	display: block;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.css_cod{
+	text-align: left;
+	color:#22b78b;
+	font-size: 15px;
+	box-shadow: 2px;
+}
+
+.image{
+	margin-left: 60%;
+	margin-top: 30%; 
+}
+
+.enunt{
+	text-align: left;
+}
+
+.container-info{
+	height: 330px;
+	width: 1000px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(1000%);
+	padding: 20px;
+}
+
+.container-info-quizmare{
+	height: 330px;
+	width: 1000px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+	padding: 20px;
+}
+
+.title-info{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #22b78b;
+}
+
+.question-info{
+	padding: 20px;
+	font-size: 22px;
+	background:#22b78b;
+	border-radius: 20px;
+	margin: 10px 0 10px 0;
+	color: #f1f1f1;
+}
+
+.option-info{
+	width: 470px;
+	display: inline-block;
+	padding: 10px 0 10px 15px;
+	vertical-align: middle;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 10px 0 10px 10px;
+	color: #000000;
+	border-radius: 20px;
+}
+
+.option-info:hover{
+	background: #22b78b;
+	color: #f1f1f1;
+}
+
+.next-btn-info{
+	border: none;
+	outline: none;
+	background: #c1c1c1;
+	width: 100px;
+	height: 35px;
+	border-radius: 20px;
+	cursor: pointer;
+	float: right;
+	margin: 10px;
+}
+
+.next-btn-info:hover{
+	background: #22b78b;
+	color: #f6f6f6;
+}
+
+.result-info{
+	height: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 75px;
+}
+
+.option-info input:checked .option-info{
+	background:#22b78b;
+	color: #000;
+}
+
+.container-bio{
+	height: 330px;
+	width: 1000px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(1000%);
+	padding: 20px;
+}
+
+.container-bio-quizmare{
+	height: 330px;
+	width: 1000px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+	padding: 20px;
+}
+
+.title-bio{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #65ac00;
+}
+
+.question-bio{
+	padding: 20px;
+	font-size: 22px;
+	background:#65ac00;
+	border-radius: 20px;
+	margin: 10px 0 10px 0;
+	color: #f1f1f1;
+}
+
+.option-bio{
+	width: 470px;
+	display: inline-block;
+	padding: 10px 0 10px 15px;
+	vertical-align: middle;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 10px 0 10px 10px;
+	color: #000000;
+	border-radius: 20px;
+}
+
+.option-bio:hover{
+	background: #65ac00;
+	color: #f1f1f1;
+}
+
+.next-btn-bio{
+	border: none;
+	outline: none;
+	background: #c1c1c1;
+	width: 100px;
+	height: 35px;
+	border-radius: 20px;
+	cursor: pointer;
+	float: right;
+	margin: 10px;
+}
+
+.next-btn-bio:hover{
+	background: #22b78b;
+	color: #f6f6f6;
+}
+
+.result-bio{
+	height: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 75px;
+}
+
+.option-bio input:checked .option-bio{
+	background:#65ac00;
+	color: #000;
+}
+
+
+.Bine{
+	margin-top: 120px;
+	text-align: center;
+	color:#353535;
+	font-size: 40px;
+}
+
+.imagini_slide{
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.contact{
+	max-width: 100%;
+	background-color: #f1f1f1;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.dupa:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+.contact_marius{
+	text-align: left;
+	margin-top: 0%;
+	margin-left: 5%;
+
+
+}
+
+.contact_vlad{
+	margin-top: 0%;
+	margin-left: 5%;
+	text-align: right;
+	
+}
+
+.text_marius{
+	text-align:left;
+	font-size: 20px;
+	padding-top: 15px;
+	padding-left: 32%;
+	padding-right: 20px;
+	padding-bottom: 0px;
+}
+
+.text_vlad{
+	text-align:left;
+	font-size: 20px;
+	padding-top: 15px;
+	padding-left: 2%;
+	padding-right: 20%;
+	padding-bottom: 0px;
+}
+
+.buton{
+	width: 15%;
+	height: 15%;
+	margin-right: 3%;
+}
+
+
+
+
+
+
+
+
+

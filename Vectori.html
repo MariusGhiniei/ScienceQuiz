@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Science Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    
+	<ul class="nav">
+    <a href="Index.html"><img src="Images/Logo.jpg" width="179px" height="80px" align="left"></a>
+       <div class="dropdown">
+          <button class="dropbutton">BIOLOGIE</button>
+            <div class="dropdown-content">
+                <a href="Botanica.html">Botanica</a>
+                <a href="Zoologie.html">Zoologie</a>
+                <a href="Anatomie.html">Anatomie</a>
+                <a href="Quiz_Biologie.html">Quiz</a>
+                  </div>
+            </div>
+         <div class="dropdown">
+              <button class="dropbutton">FIZICA</button>
+                <div class="dropdown-content">
+                    <a href="Mecanica.html">Mecanica</a>
+                    <a href="Electricitate.html">Electricitate</a>
+                    <a href="Electromagnetism.html">Electromagnetism</a>
+                    <a href="Termodinamica.html">Termodinamica</a>
+                    <a href="Optica.html">Optica</a>
+                    <a href="Quiz_Fizica.html">Quiz</a>
+                </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">CHIMIE</button>
+                <div class="dropdown-content">
+                  <a href="Organica.html">Organica</a>
+                  <a href="Anorganica.html">Anorganica</a>
+                  <a href="Quiz_Chimie.html">Quiz</a>
+              </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">INFORMATICA</button>
+                <div class="dropdown-content">
+                <a href="Algoritmi_elementari.html">Algoritmi elementari</a>
+                <a href="Vectori.html">Tablouri unidimensionale[Vectori]</a>
+                <a href="Matrice.html">Tablouri bidimensionale[Matrice]</a>
+                <a href="Subprograme_Recursivitate.html">Subprograme[Functii] si Recursivitate</a>
+                <a href="Siruri_de_caractere.html">Siruri de caractere[Char]</a>
+                    <a href="Grafuri.html">Grafuri</a>
+                <a href="Quiz_Informatica.html">Quiz</a>
+            </div>
+        </div>
+       <li><a href="Contanct.html">CONTACT</a></li>
+      </div>
+  </ul>
+<pre>
+    
+
+
+</pre>
+    <div class="citatinformatica"> <b> <i> "Nu computerele omoara cartile; oamenii le omoara." </b> </i>
+        <p> - <i> citat </i> de <strong> Douglas Rushkoff </strong> </p>
+    </div>
+    <br>
+<div class="margin_info">
+     <button class="btn-informatica" onclick="myFunction()" >Declarare</button>
+    <div id="content-informatica" style="display:none;">
+        
+    <p class="enunt">
+        Un vector arata cam asa: <br>
+        <img src="Images/vector.png" align="left">
+        Acesta este un vector cu numarul maxim de spatii in memorie egal cu 10. In prima faza, aceste spatii sunt goale. Trebuie sa le atribuim numere. <br>
+        In general vectorii se noteaza cu litere mici(ex: v, a, b, etc). <br>
+        <br>
+        <br>
+
+        <b>Declararea unui vector: </b> <br>
+        Daca avem un vector cu 100 de elemente, initializam vectorul cu 1 mai mult pentru a incepe numerotarea pozitiilor de la 1 nu de la 0. <br>
+        int v[101]; <br>
+
+        <img src="Images/vector2.jpg" align="left">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br> <br> <br> <br>
+
+        Ca sa ne fie mai usor sa ne imaginam un vector, spunem ca un vector definit cu 101, reprezinta un dulap cu 100 de sertare. <br>
+        Fiecare sertar avand alocat pentru un singur numar.
+
+
+    </p>
+    </div>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("content-informatica");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction2()" >Citire si afisare</button>
+    <div id="content-informatica2" style="display:none;">
+        <p class="enunt">
+            Pentru a lucra cu un vector trebuie sa sa-l citim si daca este nevoie si sa-l afisam.
+            <pre class="css_cod">
+                int main()
+                {
+                    int v[101],n,i;
+
+                    cin>>n; // n reprezinta numarul de elemente din vector
+                    for(i=1; i<=n; i++)
+                        cin>>v[i];
+
+                    // Prelucram vectorul
+
+                    for(i=1; i<=n; i++)
+                        cout<< v[i]<<" ";
+                }
+            </pre>
+        </p>
+    </div>
+    <script>
+        function myFunction2() {
+    var x = document.getElementById("content-informatica2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction3()" >Sortarea</button>
+    <div id="content-informatica3" style="display:none;">
+        <p class="enunt">
+            Sortarea unui vector, este un algoritm de baza ce trebuie stiut foarte bine! <br>
+            Sortarea poate fi crescatoare sau descrescatoare, singura diferenta este de conditia pusa in cele 2 for-uri.
+            <pre class="css_cod">
+                int main()
+                {
+                    int v[101],n,i,aux;
+                    cin>>n;
+                    for(i=1; i<=n; i++)
+                        cin>>v[i];
+
+                    for(i=1; i< n; i++)
+                        for(j=i+1; j<=n; j++)
+                            if(v[i] > v[j]) // Asta e conditia pentru sortare crescatoare, pentru cea descrescatoare ( if(v[i] < v[j] ) )
+                            {
+                                aux=v[i];
+                                v[i]=v[j]; // Putem inlocui toate astea cu <b><i> swap(v[i],v[j]) </i></b>
+                                v[j]=aux;
+                            }
+                }
+            </pre>
+        </p>
+    </div>
+    <script>
+        function myFunction3() {
+    var x = document.getElementById("content-informatica3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+     <button class="btn-informatica" onclick="myFunction4()" >MIN/MAX</button>
+    <div id="content-informatica4" style="display:none;">
+        <p class="enunt">
+            Minimul si maximul unui vector se realizeaza la fel ca la un sir de nuere, la vectori putem memora si pozitia minimului/maximului.
+
+            <pre class="css_cod">
+                int main()
+                {
+                    int v[101],n,i,p,q;
+                    int maxim = 0; //Initializam maximul cu cea mai mica valoare posibila ;
+                    int minim = 999999; //Initializam minimul cu cea mai mare valoare posibila;
+
+                    cin>>n;
+                    for(i=1; i<=n; i++)
+                        cin>>v[i];
+
+                    for(i=1; i<=n; i++)
+                        {
+                            if(maxim < v[i])
+                                {
+                                    maxim = v[i];
+                                    p=i; //P-ul va retine pozitia maximului din vector;
+                                }
+                            if(minim > v[i])
+                                {
+                                    minim = v[i];
+                                    q=i; //Q-ul va retine pozitia minimului din vector;
+                                }
+                        }
+                    cout<<"Maximul este "<< maxim<<" si este situat pe pozitia "<< p;
+                    cout<<"Minimul este "<< minim<<" si este situat pe pozitia "<< q;
+
+                    return 0;
+                }
+            </pre>
+        </p>
+       
+    </div>
+    <script>
+        function myFunction4() {
+    var x = document.getElementById("content-informatica4");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+  <button class="btn-informatica" onclick="myFunction5()" > Cautarea unei valori </button>
+    <div id="content-informatica5" style="display:none;">
+
+        <p class="enunt">
+            Pentru a cauta o valoare dintr-un vector avem nevoie de urmatorul algoritm.
+            <pre class="css_cod">
+                int main()
+                {
+                    int v[101],n,i,gasit;
+
+                    cin>>n;
+                    for(i=1; i<=n; i++)
+                        cin>>v[i];
+                    cin>>gasit;
+
+                    for(i=1; i<=n; i++)
+                        if(v[i] == gasit)
+                        {
+                        cout<<"Numarul gasit este pe pozitia "<< i;
+                        break;}
+
+                    return 0;
+                }
+            </pre>
+        </p>
+       
+    </div>
+    <script>
+        function myFunction5() {
+    var x = document.getElementById("content-informatica5");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+  <button class="btn-informatica" onclick="myFunction6()" > Intersectia a 2 vectori</button>
+    <div id="content-informatica6" style="display:none;">
+       <p class="enunt">
+           Pentru a insercta doi vectori ne vom folosi de urmatorul algoritm care verifica daca doua elemente sunt egale.
+           <pre class="css_cod">
+               int main()
+               {
+                int a[101], b[101], n, m, i, j, c[101], k=0;
+
+                cin>>n;
+                for(i=1; i<=n; i++)
+                    cin>>a[i];
+                cin>>m;
+                for(j=1; j<=m; j++)
+                    cin>>b[j];
+                for(i=1; i<=n; i++)
+                    for(j=1; j<=m; j++)
+                        if(a[i] == b[j]) //Daca sunt 2 elemente egale le punem intr-un alt vector
+                            c[k++]=a[i];
+                for(i=1; i<=k; i++)
+                    cout<< c[i]<<" ";
+               }
+           </pre>
+       </p>
+    </div>
+    <script>
+        function myFunction6() {
+    var x = document.getElementById("content-informatica6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+  <button class="btn-informatica" onclick="myFunction7()"> Reuniunea a 2 vectori </button>
+    <div id="content-informatica7" style="display:none;">
+        <p class="enunt">
+            Ca sa reunim 2 vectori, facem un al 3-lea vector si copiem cei 2 vectori in el. <br>
+            Sau mai putem copia al doilea vector in primul vector, ori invers. <br>
+            De obicei e mai bine sa cream un nou vector ca sa fie mai clar.
+
+            <pre class="css_cod">
+                int main()
+                {
+                    int a[101], b[101], n, i, c[201], k=0;
+                    cin>>n;
+                    for(i=1; i<=n; i++)
+                        cin>>a[i];
+                    cin>>m;
+                    for(i=1; i<=m; i++)
+                        cin>>b[i];
+                    for(i=1; i<=n; i++)
+                        c[k++] = a[i];
+                    for(i=1; i<=m; i++)
+                        c[k++] = b[i];
+                    for(i=1; i<=k; i++)
+                        cout<< c[i]<<" ";
+                    return 0;
+                }
+            </pre>
+        </p>
+       
+    </div>
+    <script>
+        function myFunction7() {
+    var x = document.getElementById("content-informatica7");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+<br><br>
+
+  <button class="btn-informatica" onclick="myFunction8()" > Permutare(stanga)</button>
+    <div id="content-informatica8" style="display:none;">
+        <p class="enunt">
+            Algoritmul de permutare circulara cate o pozitie spre stanga este pur si simplu o rotatie a vectorului. <br>
+            E ca si cum am inversa indicii(in loc sa fie de la 1 la 10 poate sa fie de la 5 la 4)
+            <pre class="css_cod">
+               
+                int main()
+                {
+                    int v[101],n,i,aux;
+                    cin>>n;
+                    for(i=1;i<=n;i++)
+                        cin>>v[i];
+                    for(i=1;i<=n-1;i++)
+                    {
+                        aux=v[i];
+                        v[i]=v[i+1];
+                        v[i+1]=aux;
+                    }
+                    for(i=1;i<=n;i++)
+                        cout<< v[i]<<" ";
+                    return 0;
+                }
+            </pre>
+        </p>
+       
+    </div>
+    <script>
+        function myFunction8() {
+    var x = document.getElementById("content-informatica8");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+  <button class="btn-informatica" onclick="myFunction8()" >Permutare(dreapta)</button>
+    <div id="content-informatica8" style="display:none;">
+            <p class="enunt">
+                Algoritmul de permutare circulara cate o pozitie spre dreapta este la fel cu cel spre stanga doar difera sensul.
+                <pre class="css_cod">
+                   
+                int main()
+                {
+                    int v[101],n,i,aux;
+                    cin>>n;
+                    for(i=1;i<=n;i++)
+                        cin>>v[i];
+                    for(i=n;i>=2;i--)
+                    {
+                        aux=v[i];
+                        v[i]=v[i-1];
+                        v[i-1]=aux;
+                    }
+                    for(i=1;i<=n;i++)
+                        cout<< v[i]<<" ";
+                    return 0;
+                }
+                </pre>
+            </p>
+       
+    </div>
+    <script>
+        function myFunction8() {
+    var x = document.getElementById("content-informatica8");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+  <button class="btn-informatica" onclick="myFunction9()" >Stergerea unui element</button>
+    <div id="content-informatica9" style="display:none;">
+        <p class="enunt">
+            Stergerea unui element (de obicei se da pozitia de pe care sa se stearga sau se da elemetul efectiv ) <br>
+            Algoritmul poate fi adaptat si sa stearga o lnie/coloana la matrice.
+
+            <pre class="css_cod">
+               
+                int main()
+                {
+                    int v[101],n,i,p;
+                    cin>>n;
+                    cin>>p;
+                    for(i=1;i<=n;i++)
+                        cin>>v[i];
+                    for(i=p;i<=n;i++)
+                        v[i]=v[i+1];
+                    n--; //Scadem din n 1 pentru ca am sters numarul p
+                    for(i=1;i<=n;i++)
+                        cout<< v[i]<<" ";
+                return 0;
+}
+            </pre>
+        </p>
+       
+    </div>
+    <script>
+        function myFunction9() {
+    var x = document.getElementById("content-informatica9");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+</script>
+
+  <button class="btn-informatica" onclick="myFunction8()" >Inserarea unui element</button>
+    <div id="content-informatica8" style="display:none;">
+        <p class="enunt">
+            Inserarea unui element p pe pozitia x ( de cele mai multe ori ) <br>
+
+            <pre class="css_cod">
+              
+                int main()
+                {
+                    int v[101],n,i,p,x;
+                    cin>>n;
+                    cin>>p;
+                    cin>>x;
+                    for(i=1;i<=n;i++)
+                        cin>>v[i];
+                    for(i=n;i>=p;i--)
+                        v[i+i]=v[i];
+                        v[p]=x;
+                    n++; //Crestem lungimea vectorului pentru ca am adaugat un element in vector
+                    for(i=1;i<=n;i++)
+                        cout<< v[i]<<" ";
+                    return 0;
+                }
+            </pre>
+        </p>
+       
+    </div>
+    <script>
+        function myFunction8() {
+    var x = document.getElementById("content-informatica8");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</div>	
+<br>
+<a href="#quizContainer"><img src="Images/ButoaneQuiz-info.png" align="right" class="buton"></a>
+
+<!-- Quiz container -->
+
+
+<div id="quizContainer" class="container-info">
+
+
+      <div class="title-info">Vectori Quiz</div>
+      <div id="question" class="question-info"></div>
+          <label class="option-info"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+      <button id="nextButton" class="next-btn-info" onclick="loadNextQuestion();">NEXT</button>
+
+    </div>
+    <div id="result" class="container-info result-info" style="display:none;">
+
+    </div>
+     <script src="question.js"></script>
+    
+    <script src="Scripts/quiz-vectori.js"></script>
+
+</body>
+</html>

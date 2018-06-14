@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Science Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    
+  <ul class="nav">
+    <a href="Index.html"><img src="Images/Logo.jpg" width="179px" height="80px" align="left"></a>
+       <div class="dropdown">
+          <button class="dropbutton">BIOLOGIE</button>
+            <div class="dropdown-content">
+                <a href="Botanica.html">Botanica</a>
+                <a href="Zoologie.html">Zoologie</a>
+                <a href="Anatomie.html">Anatomie</a>
+                <a href="Quiz_Biologie.html">Quiz</a>
+                  </div>
+            </div>
+         <div class="dropdown">
+              <button class="dropbutton">FIZICA</button>
+                <div class="dropdown-content">
+                    <a href="Mecanica.html">Mecanica</a>
+                    <a href="Electricitate.html">Electricitate</a>
+                    <a href="Electromagnetism.html">Electromagnetism</a>
+                    <a href="Termodinamica.html">Termodinamica</a>
+                    <a href="Optica.html">Optica</a>
+                    <a href="Quiz_Fizica.html">Quiz</a>
+                </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">CHIMIE</button>
+                <div class="dropdown-content">
+                  <a href="Organica.html">Organica</a>
+                  <a href="Anorganica.html">Anorganica</a>
+                  <a href="Quiz_Chimie.html">Quiz</a>
+              </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">INFORMATICA</button>
+                <div class="dropdown-content">
+                <a href="Algoritmi_elementari.html">Algoritmi elementari</a>
+                <a href="Vectori.html">Tablouri unidimensionale[Vectori]</a>
+                <a href="Matrice.html">Tablouri bidimensionale[Matrice]</a>
+                <a href="Subprograme_Recursivitate.html">Subprograme[Functii] si Recursivitate</a>
+                <a href="Siruri_de_caractere.html">Siruri de caractere[Char]</a>
+                    <a href="Grafuri.html">Grafuri</a>
+                <a href="Quiz_Informatica.html">Quiz</a>
+            </div>
+        </div>
+       <li><a href="Contanct.html">CONTACT</a></li>
+      </div>
+  </ul>
+<pre>
+    
+
+
+</pre>
+	<div class="citatinformatica"> <b> <i> "Nu ma tem de calculatoare. Ma tem de lipsa acestora." </b> </i>
+        <p> - <i> citat </i> de <strong>Isaac Asimov  </strong> </p>
+    </div>
+    <br>
+<div class="margin_info">
+     <button class="btn-informatica" onclick="myFunction()" > Operatori aritmetici </button>
+    <div id="content-informatica" style="display:none; text-align: center;">
+       <pre class="content2"> Operatorii aritmetici sunt : "+", "/", "-", "*", "%" .
+           "A + B" reprezinta suma dintre A si B.
+           "A / B" reprezinta catul impartirii lui A la B.
+           "A - B" reprezinta diferenta dintre A si B.
+           "A * B" reprezinta produsul dintre A si B.
+           "A % B" reprezinta restul impartirii lui A la B.
+                     ex: A%10 = ultima cifra a lui A.
+                         A%2 = 0(A este numar par), 1(este numar impar)
+       </pre>
+    </div>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("content-informatica");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction2()" > Operatori relationali</button>
+    <div id="content-informatica2" style="display:none; text-align: center;">
+        <pre class="content2"> Operatorii relationali sunt: "<", ">", "!=", "<=", "=>", "==", "===" .
+            "A < B" reprezinta ca numarul B e mai mare decat numarul A.
+            "A > B" reprezinta ca numarul A e mai mare decat numarul B.
+            "A != B" reprezinta ca numerele A si B sunt diferite.
+            "A <= B" reprezinta ca numarul B este mai mare sau egal cu numarul A.
+            "A => B" reprezinta ca numarul B este mai mic sau egal cu numarul A.
+            "A == B" reprezinta ca numerele A si B sunt egale(le verifica valoarea numerica).
+            "A === B" reprezinta ca numerele A si B sunt egale(numeric) si tipul lor(int, long long, char, etc ).
+        </pre>
+
+    </div>
+    <script>
+        function myFunction2() {
+    var x = document.getElementById("content-informatica2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction3()" > Operatori logici</button>
+    <div id="content-informatica3" style="display:none; text-align: center;">
+        <pre class="content2">Operatorii logici sunt: "&amp;&amp;", "||", "!".
+        <ul>    Toti operatorii logici returneaza valori de tipul <b><i>bool</i></b>,<b><i> true </b></i>sau<b><i> false</b></i>
+        <li>"A &amp;&amp;B" reprezinta doua conditii.
+             <strong>ex:</strong> if(x < 10 &amp;&amp;x != 0){
+                  // x respecta ambele conditiile 
+                }
+                else{
+                  // x nu respecta ambele conditii
+                 }
+           </li><li> "A || B" reprezinta ca una dintre cele doua conditii este adevarata.
+             <strong>ex:</strong> if(A || B){
+                   // este respectata una dintre conditii
+                  }
+                 else{
+                   // nu este respectata nicio conditie
+                 }
+                 
+           </li><li> "!A" reprezinta negarea lui A.
+             <strong>ex:</strong>if(x!=0)
+                  // x este diferit de 0</li>
+        </ul>
+        </pre>
+    </div>
+    <script>
+        function myFunction3() {
+    var x = document.getElementById("content-informatica3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<button class="btn-informatica" onclick="myFunction4()" > Instructiuni </button>
+    <div id="content-informatica4" style="display:none;">
+      <div class="content2">Sunt mai multe tipuri de instructiuni:<i> if, for, while, switch, do while</i></div>
+        <div>
+          <div class="instructiuni pre_instructiuni">
+            <h3 ">WHILE</h3>
+              <p class="p_context" style="margin-left: 140px;">
+                  while(conditie){ <br>
+                  //instructiuni; <br>
+                   } <br>
+                </p>
+            <br> <br> <br>
+             <strong style="font-size: 15px;">EX:</strong>
+               <p class="p_context" style="margin-left: 140px;">while(n!=0) <br>
+                   { <br>
+                     cout<< n/10<<" "; <br>
+                    } <br>
+                </p>
+
+          </div>
+                  
+           <div class="instructiuni"> <h3 style="margin-left: 80px;">IF</h3>
+              <p class="p_context" style="margin-left: 80px;">
+                   if(conditie){ <br> 
+                   //instructiuni; <br>
+                   } <br>
+                </p> 
+              <br>
+              <br>
+              <br>
+              <strong style="margin-left: 80px;">EX:</strong>
+                 <p class="p_context"  style="margin-left: 80px"> if(n>0){<br>
+                    n=n-10; <br>
+                    } <br>
+                     else {<br>
+                      n=n+10; <br>
+                     } <br>
+                   </p>
+          </div>
+
+          <div class="instructiuni">
+            <h3>FOR</h3>
+              <p class="p_context"> for(variabila;conditie;variabila creste){ <br>
+                   //instructiuni <br>
+                   } <br>
+              </p>
+                       <br>
+                       <br>
+                       <br>
+                <strong>EX:</strong>
+                  <p class="p_context">
+                      for(i=1;i<=n;i++){ <br>
+                      cout<< i<<" "; <br>
+                      } <br>
+
+                  </p>
+          </div> 
+            <div class="instructiuni"> 
+                <h3>SWITCH</h3>
+                  <p class="p_context">switch(expresie){ <br>
+                      case <i>name1 </i>: //instructiuni; <br>
+                                              break; <br>
+                      case <i>name2</i> : //instructiuni <br>
+                                              break; <br> 
+                      default: //instructiuni break;
+                      }
+                   </p>
+                         
+                      <strong>EX:</strong>
+                         <p class="p_context">
+                             switch(i){ <br>
+                             case 1: cout<<"i=1"; <br> 
+                                   break; <br>
+                             case 2: cout<<"i=2"; <br>
+                                   break; <br>
+                             default: cout<<"i=>10"; <br>
+                                    break; 
+                          }
+                         </p>
+            </div> 
+      </div>
+    <br>
+    <br>
+  </div>
+
+    <script>
+        function myFunction4() {
+    var x = document.getElementById("content-informatica4");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+<button class="btn-informatica" onclick="myFunction5()" >Suma cifrelor lui n</button>
+    <div id="content-informatica5" style="display:none;">
+        <p class="enunt">Se citeste un numar n, sa se aifiseze suma cifrelor numarului n. <br>
+        <i>Exemplu:</i> n=1045 <br>
+                 s=10
+        </p> <br>    
+            <pre class="css_cod">
+        int main()
+        {
+         int n,s=0; //declaram variabile pe care le vom folosi
+         cin>>n;
+         while(n!=0){
+         s=s+n%10; //adunam la suma ultima cifra a numarului
+         n=n/10; //eliminam ultima cifra
+         }
+         cout<<"Suma cifrelor lui "<< n <<"este " << s; //afisam suma
+         return 0;
+       }
+       </pre>      
+    </div>
+    <script>
+        function myFunction5() {
+    var x = document.getElementById("content-informatica5");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction6()" >Inversul lui n</button>
+    <div id="content-informatica6" style="display:none;">
+       
+       <p class="enunt">Se citeste un numar n, sa se afiseze inversul numarului n. <br>
+        <i>Exemplu: </i>n=153 <br> 
+                       inv=351
+        </p>
+       <pre class="css_cod">
+         
+         int main()
+         {
+          int n,inv=0;
+          cin>>n;
+          while(n!=0){
+          inv=inv*10+n%10; //adunam la  inceputul lui inv ultima cifra a lui n
+          n=n/10;
+        }
+          cout<<"Inversul numarului "<< n<<"este "<< inv;
+          
+         }
+       </pre>
+      
+    </div>
+    <script>
+        function myFunction6() {
+    var x = document.getElementById("content-informatica6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+<button class="btn-informatica" onclick="myFunction7()" >Numar prim</button>
+    <div id="content-informatica7" style="display:none;">
+       
+        <p class="enunt">
+          Se citeste un numar n, sa se verifice daca n este prim. <br>
+          <i>Exemplu: </i> n=29 <br>
+                          Numarul 29 este prim.
+        </p>
+       <pre class="css_cod">
+        
+         int main()
+         {
+          int n,d,ok=1;
+          cin>>n;
+          for(d=2;d*d<=n;d++) //parcurgem divizorii lui n
+              if(n%d==0) //daca un divizor se divide cu n atunci nu mai este prim
+                ok=0; //a
+          if(ok==1)
+              cout<<"Numarul "<< n<<"este prim";
+          else
+              cout<<"Numarul "<< n<<"nu este prim";
+         }
+       </pre>
+      
+    </div>
+    <script>
+        function myFunction7() {
+    var x = document.getElementById("content-informatica7");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+<br>
+<br>
+
+
+<button class="btn-informatica" onclick="myFunction8()" > Descompunere in factori primi</button>
+    <div id="content-informatica8" style="display:none;">
+       
+        <p class="enunt">
+          Se citeste un numar natural n, sa se descompuna in factori primi. <br>
+          <i>Exemplu: </i> n=12 <br>
+                     Numarul 12 descompus in factori primi este: 2 la puterea 2, 3 la puterea 1
+        </p>
+       <pre class="css_cod">
+         
+         int main()
+         {
+          int n,d=2;
+          cin>>n;
+          cout<<"Numarul "<< n<<" descompus in factori primi este: "
+          while(n>=1){
+            int p=0;
+                while(n%d=0){
+                p++;
+                n=n/d;
+              }
+              if(p!=0){
+              cout<< d<<"la puterea "<< p<<" ,";
+            }
+            d++;
+        }
+         }
+       </pre>
+    </div>
+    <script>
+        function myFunction8() {
+    var x = document.getElementById("content-informatica8");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction9()" >CMMDC</button>
+    <div id="content-informatica9" style="display:none;">
+       
+        <p class="enunt">
+          Se citesc doua numere naturale a si b, sa se determine CMMDC-ul lor. <br>
+          <i>Exemplu: </i> a=12 b=4 <br>
+                          CMMDC-ul lui a si b este 4.
+        </p>
+       <pre class="css_cod">
+         int main()
+         {
+          int a,b;
+          cin>>a>>b;
+          while(a!=b)
+          {
+            if(a>b)
+              a=a-b;
+            else
+              b=b-a;
+          }
+          cout<<"CMMDC-ul lui a si b este"<< a;
+         }
+       </pre>
+      
+    </div>
+    <script>
+        function myFunction9() {
+    var x = document.getElementById("content-informatica9");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction10()" >CMMMC</button>
+    <div id="content-informatica10" style="display:none;">
+  
+        <p class="enunt">
+          Se citesc doua numere naturale a si b, sa se determine CMMMC-ul lor. <br>
+          <i>Exemplu: </i> a=100 b=20 <br>
+                        CMMC-ul lui a si b este 100.
+        </p>
+          <pre class="css_cod">
+            int main()
+            {
+              int a,b,ca,cb;
+              cin>>a>>b;
+              ca=a;
+              cb=b;
+              while(a!=b)
+              {
+                if(a>b)
+                  a=a-b;
+                else
+                  b=b-a;
+              }
+              cout<<"CMMMC-ul lui a si b este "<<(ca*cb)/a; //ne folosim de formula matematica a*b/cmmdc(a,b)=cmmmc(a,b)
+              return 0;
+            }
+          </pre>      
+    </div>
+    <script>
+        function myFunction10() {
+    var x = document.getElementById("content-informatica10");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction11()" >Sirul lui fibonacci</button>
+    <div id="content-informatica11" style="display:none;">
+      <p class="enunt">
+        Sa se afiseze primii n termeni ai sirului lui fibonacci. <br>
+        <i>Exemplu: </i> n=7 <br>
+         Primii 7 termeni sunt: 1 1 2 3 5 8 13
+      </p>  
+
+      <pre class="css_cod">
+        int main()
+        {
+          int a,b,c,n;
+          cin>>n;
+          cout<<"Primii "<< n<<" termeni sunt: "
+          a=1;
+          b=1;
+          for(i=1;i<=n;i++)
+          {
+            c=a+b;
+            a=b;
+            b=c;
+
+            cout<< b<<" ";
+          }
+          return 0;
+        }
+      </pre>    
+    </div>
+    <script>
+        function myFunction11() {
+    var x = document.getElementById("content-informatica11");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction12()" >Termeni mai mici decat n</button>
+    <div id="content-informatica12" style="display:none;">
+        <p class="enunt">
+          Sa se afiseze tot termenii mai mici sau egali decat n. <br>
+          <i>Exemplu: </i> n=15 <br>
+                      1 1 2 3 5 8 13
+        </p>
+
+        <pre class="css_cod">
+          int main()
+          {
+            int a,b,c,n;
+              cin>>n;
+              a=1;
+              b=1;
+              while(b<=n)
+              {
+                cout<< b<<" ";
+                c=a+b;               
+                a=b;
+                b=c;
+              }
+              return 0;
+          }
+        </pre>
+      
+    </div>
+    <script>
+        function myFunction12() {
+    var x = document.getElementById("content-informatica12");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction13()" >Minimul</button>
+    <div id="content-informatica13" style="display:none;">
+       <p class="enunt">
+         Se citeste un sir cu n numere naturale.Sa se determine elementul minim din sir. <br>
+         <i>Exemplu: </i>  n=8 <br>
+                           6 12 9 1 2 3 6 19 <br>
+                           Minimul este 1 <br>
+       </p>
+
+       <pre class="css_cod">
+         int main()
+         {
+          int n,mini,x,i;
+          cin>>n;
+          cin>>x;
+          mini=x; //Minimul se initializeaza cu primul element sau cu cea mai mare valoare posibila
+          for(i=1;i< n;i++)
+            {
+              cin>>x;
+              if(x< mini)
+                mini=x;
+            }
+          cout<<"Minimul este "<< mini;
+         }
+       </pre>
+      
+    </div>
+    <script>
+        function myFunction13() {
+    var x = document.getElementById("content-informatica13");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+<button class="btn-informatica" onclick="myFunction14()" >Maximul</button>
+    <div id="content-informatica14" style="display:none;">
+       <p class="enunt">
+         Se citeste un sir cu n numere naturale. Sa se determine elementul maxim din sir.
+         <i>Exemplu: </i> n=8 <br>
+                          6 12 9 1 2 3 6 19 <br>
+                          Maximul este 19
+       </p>
+
+       <pre class="css_cod">
+           int main()
+         {
+          int n,maxi,x,i;
+          cin>>n;
+          cin>>x;
+          maxi=x; //Maximul se initializeaza cu primul element sau cu cea mai mica valoare posibila
+          for(i=1;i< n;i++)
+            {
+              cin>>x;
+              if(x > maxi)
+                maxi=x;
+            }
+          cout<<"Maximul este "<< maxi;
+         }
+       </pre>
+
+      
+    </div>
+    <script>
+        function myFunction14() {
+    var x = document.getElementById("content-informatica14");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<br><br> 
+
+
+</div><br>
+<a href="#quizContainer"><img src="Images/ButoaneQuiz-info.png" align="right" class="buton"></a>
+
+<div id="quizContainer" class="container-info">
+
+
+      <div class="title-info">Algoritmi elementari Quiz</div>
+      <div id="question" class="question-info"></div>
+          <label class="option-info"><input type="radio" name="option-" value="1" /> <span id="opt1"></span></label>
+          <label class="option-info"><input type="radio" name="option-" value="2" /> <span id="opt2"></span></label>
+          <label class="option-info"><input type="radio" name="option-" value="3" /> <span id="opt3"></span></label>
+          <label class="option-info"><input type="radio" name="option-" value="4" /> <span id="opt4"></span></label>
+      <button id="nextButton" class="next-btn-info" onclick="loadNextQuestion();">NEXT</button>
+
+    </div>
+    <div id="result" class="container-info result-info" style="display:none;">
+
+    </div>
+     <script src="question.js"></script>
+    
+    <script src="Scripts/quiz-algoritmielementari.js"></script>
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

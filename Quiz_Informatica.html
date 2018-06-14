@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Science Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    
+    <ul class="nav">
+    <a href="Index.html"><img src="Images/Logo.jpg" width="179px" height="80px" align="left"></a>
+       <div class="dropdown">
+          <button class="dropbutton">BIOLOGIE</button>
+            <div class="dropdown-content">
+                <a href="Botanica.html">Botanica</a>
+                <a href="Zoologie.html">Zoologie</a>
+                <a href="Anatomie.html">Anatomie</a>
+                <a href="Quiz_Biologie.html">Quiz</a>
+                  </div>
+            </div>
+         <div class="dropdown">
+              <button class="dropbutton">FIZICA</button>
+                <div class="dropdown-content">
+                    <a href="Mecanica.html">Mecanica</a>
+                    <a href="Electricitate.html">Electricitate</a>
+                    <a href="Electromagnetism.html">Electromagnetism</a>
+                    <a href="Termodinamica.html">Termodinamica</a>
+                    <a href="Optica.html">Optica</a>
+                    <a href="Quiz_Fizica.html">Quiz</a>
+                </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">CHIMIE</button>
+                <div class="dropdown-content">
+                  <a href="Organica.html">Organica</a>
+                  <a href="Anorganica.html">Anorganica</a>
+                  <a href="Quiz_Chimie.html">Quiz</a>
+              </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">INFORMATICA</button>
+                <div class="dropdown-content">
+                <a href="Algoritmi_elementari.html">Algoritmi elementari</a>
+                <a href="Vectori.html">Tablouri unidimensionale[Vectori]</a>
+                <a href="Matrice.html">Tablouri bidimensionale[Matrice]</a>
+                <a href="Subprograme_Recursivitate.html">Subprograme[Functii] si Recursivitate</a>
+                <a href="Siruri_de_caractere.html">Siruri de caractere[Char]</a>
+                    <a href="Grafuri.html">Grafuri</a>
+                <a href="Quiz_Informatica.html">Quiz</a>
+            </div>
+        </div>
+       <li><a href="Contanct.html">CONTACT</a></li>
+      </div>
+  </ul>
+<pre>
+    
+
+
+</pre>
+
+<div id="quizContainer" class="container-info-quizmare">
+
+
+      <div class="title-info">Informatica Quiz</div>
+      <div id="question" class="question-info"></div>
+          <label class="option-info"><input type="radio" name="option-info" value="1" /> <span id="opt1"></span></label>
+          <label class="option-info"><input type="radio" name="option-info" value="2" /> <span id="opt2"></span></label>
+          <label class="option-info"><input type="radio" name="option-info" value="3" /> <span id="opt3"></span></label>
+          <label class="option-info"><input type="radio" name="option-info" value="4" /> <span id="opt4"></span></label>
+      <button id="nextButton" class="next-btn-info" onclick="loadNextQuestion();">NEXT</button>
+
+    </div>
+    <div id="result" class="container-info-quizmare result-info" style="display:none;">
+
+    </div>
+     <script src="question.js"></script>
+    
+    <script src="Scripts/quiz-quizmare.js"></script>
+
+
+</body>
+</html>

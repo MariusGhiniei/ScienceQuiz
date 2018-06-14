@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Science Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    
+<ul class="nav">
+    <a href="Index.html"><img src="Images/Logo.jpg" width="179px" height="80px" align="left"></a>
+       <div class="dropdown">
+          <button class="dropbutton">BIOLOGIE</button>
+            <div class="dropdown-content">
+                <a href="Botanica.html">Botanica</a>
+                <a href="Zoologie.html">Zoologie</a>
+                <a href="Anatomie.html">Anatomie</a>
+                <a href="Quiz_Biologie.html">Quiz</a>
+                  </div>
+            </div>
+         <div class="dropdown">
+              <button class="dropbutton">FIZICA</button>
+                <div class="dropdown-content">
+                    <a href="Mecanica.html">Mecanica</a>
+                    <a href="Electricitate.html">Electricitate</a>
+                    <a href="Electromagnetism.html">Electromagnetism</a>
+                    <a href="Termodinamica.html">Termodinamica</a>
+                    <a href="Optica.html">Optica</a>
+                    <a href="Quiz_Fizica.html">Quiz</a>
+                </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">CHIMIE</button>
+                <div class="dropdown-content">
+                  <a href="Organica.html">Organica</a>
+                  <a href="Anorganica.html">Anorganica</a>
+                  <a href="Quiz_Chimie.html">Quiz</a>
+              </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">INFORMATICA</button>
+                <div class="dropdown-content">
+                <a href="Algoritmi_elementari.html">Algoritmi elementari</a>
+                <a href="Vectori.html">Tablouri unidimensionale[Vectori]</a>
+                <a href="Matrice.html">Tablouri bidimensionale[Matrice]</a>
+                <a href="Subprograme_Recursivitate.html">Subprograme[Functii] si Recursivitate</a>
+                <a href="Siruri_de_caractere.html">Siruri de caractere[Char]</a>
+                    <a href="Grafuri.html">Grafuri</a>
+                <a href="Quiz_Informatica.html">Quiz</a>
+            </div>
+        </div>
+       <li><a href="Contanct.html">CONTACT</a></li>
+      </div>
+  </ul>
+<pre>
+    
+
+
+</pre>
+<div class="margin_info">
+    <div class="citatbio"> <b> <i> "Anatomia este destin" </i> </b>
+        <p> - <i> definitie celebra </i> data de <strong> Sigmund Freud </strong> </p>
+    </div>
+    <br>
+    <button class="btn-biologie" onclick="myFunction()" >Definitie</button>
+  <div id="content-biologie" style="display:none;">
+    <p class="teorie-bio">
+      Disciplină ştiinţifică vastă care se ocupă cu studiul structurii organismului uman, animal sau vegetal. Anatomia descriptivă se ocupă cu descrierea formelor diferitelor organe şi a raporturilor între ele; anatomia patologică studiază modificările apărute în structura ţesuturilor şi organelor corpului.
+    </p>
+  </div>
+  <script>function myFunction() {
+    var x = document.getElementById("content-biologie");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+<a href="#quizContainer"><img src="Images/ButoaneQuiz-bio.png" align="right" class="buton"></a>
+
+<div id="quizContainer" class="container-bio">
+
+
+      <div class="title-bio">Anatomie Quiz</div>
+      <div id="question" class="question-bio"></div>
+          <label class="option-bio"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+          <label class="option-bio"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+          <label class="option-bio"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+          <label class="option-bio"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+      <button id="nextButton" class="next-btn-bio" onclick="loadNextQuestion();">NEXT</button>
+
+    </div>
+    <div id="result" class="container-bio result-bio" style="display:none;">
+
+    </div>
+     <script src="question.js"></script>
+    
+    <script src="Scripts/quiz-anatomie.js"></script>
+</body>
+</html>

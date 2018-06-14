@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Science Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    
+    <ul class="nav">
+    <a href="Index.html"><img src="Images/Logo.jpg" width="179px" height="80px" align="left"></a>
+       <div class="dropdown">
+          <button class="dropbutton">BIOLOGIE</button>
+            <div class="dropdown-content">
+                <a href="Botanica.html">Botanica</a>
+                <a href="Zoologie.html">Zoologie</a>
+                <a href="Anatomie.html">Anatomie</a>
+                <a href="Quiz_Biologie.html">Quiz</a>
+                  </div>
+            </div>
+         <div class="dropdown">
+              <button class="dropbutton">FIZICA</button>
+                <div class="dropdown-content">
+                    <a href="Mecanica.html">Mecanica</a>
+                    <a href="Electricitate.html">Electricitate</a>
+                    <a href="Electromagnetism.html">Electromagnetism</a>
+                    <a href="Termodinamica.html">Termodinamica</a>
+                    <a href="Optica.html">Optica</a>
+                    <a href="Quiz_Fizica.html">Quiz</a>
+                </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">CHIMIE</button>
+                <div class="dropdown-content">
+                  <a href="Organica.html">Organica</a>
+                  <a href="Anorganica.html">Anorganica</a>
+                  <a href="Quiz_Chimie.html">Quiz</a>
+              </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbutton">INFORMATICA</button>
+                <div class="dropdown-content">
+                <a href="Algoritmi_elementari.html">Algoritmi elementari</a>
+                <a href="Vectori.html">Tablouri unidimensionale[Vectori]</a>
+                <a href="Matrice.html">Tablouri bidimensionale[Matrice]</a>
+                <a href="Subprograme_Recursivitate.html">Subprograme[Functii] si Recursivitate</a>
+                <a href="Siruri_de_caractere.html">Siruri de caractere[Char]</a>
+                    <a href="Grafuri.html">Grafuri</a>
+                <a href="Quiz_Informatica.html">Quiz</a>
+            </div>
+        </div>
+       <li><a href="Contanct.html">CONTACT</a></li>
+      </div>
+  </ul>
+<pre>
+    
+
+
+</pre>
+    <div class="citatinformatica"> <b> <i> "Citat inspirational" </b> </i>
+        <p> - <i> aforism </i> de <strong> Vlad Spinu </strong> </p>
+    </div>
+    <br>
+    <div class="margin_info">
+
+     <button class="btn-informatica" onclick="myFunction()" > Notiune </button>
+    <div id="content-informatica" style="display:none;">
+      <p class="enunt">
+      <strong>  Definiţie: </strong> Un subprogram <i> (funcţie) </i> reprezintă un ansamblu de instrucţiuni (de declarare, executabile) scrise în vederea executării unei anumite prelucrări, ansamblu identificat printr-un nume şi implementat separat  <br>(în exteriorul oricărei alte funcţii). <br> <br>
+                  <b>Subprogramele sunt unităţi de program care: </b> 
+        <ul style="text-align: left; margin-left: 50px;">
+                <li>au un algoritm propriu </li>
+                <li>pot fi proiectate independent </li>
+                <li>pot fi scrise independent </li>
+                <li>pot fi compilate independent </li>
+                <li>nu se pot executa independent ci numai în cadrul unui program (apel) </li>
+
+        </ul>
+        <p style="text-align: left;"><strong>De tinut minte:</strong> Exista doua feluri de variabile <i>globale</i>, se pot folosi in fiecare functie si cele <i>locale</i> care
+         se declara in functie si se pot folosi doar in acea functie </p>
+
+      </p>
+    </div>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("content-informatica");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction2()" >Functii int</button>
+    <div id="content-informatica2" style="display:none;">
+      <p class="enunt">
+       O functie de tip int v-a returna o valoare, daca se prelucreaza un vector sau o matrice nu se v-a putea folosi functii de tip <i>int</i>, se va folosi de tipul <i>void</i>.
+        <pre class="css_cod">
+          <strong>Exemplu:</strong> <br> Sa se elaboreze o functie care determina suma cifrelor unui numar. <br>
+          int suma(int n)
+          {
+            int s=0; // Variabila s este locala si v-a fi folosita doar in aceasta functie, suma
+
+            while(n)
+            {
+              s=s+n%10;
+              n=n/10;
+            }
+            return s; //Returnam valoarea din suma
+          }
+
+        </pre>
+       </i><br>
+
+      </p>
+    </div>
+    <script>
+        function myFunction2() {
+    var x = document.getElementById("content-informatica2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction3()" > Functii void </button>
+    <div id="content-informatica3" style="display:none;">
+      <p class="enunt">
+        Daca o functie nu returneaza nicio valoare, sunt de tipul <i>void</i>. Functiile void pot fi fara parametri, ele cand sunt apelate afiseaza ceva (cout).
+        <strong> Exemplu:</strong><br>Sa se elaboreze o functie care citeste o matrice. <br>
+         <pre class="css_cod">
+          void citire(a[][], int n, int m)
+          {
+            for(int i=1; i<=n; i++)
+              for(int j=1; j<=m; j++)
+                cin>>a[i][j];
+          }
+        </pre>
+      </p>
+    </div>
+    <script>
+        function myFunction3() {
+    var x = document.getElementById("content-informatica3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+ <button class="btn-informatica" onclick="myFunction4()" > Functii cu &amp; </button>
+    <div id="content-informatica4" style="display:none;">
+      <p class="enunt">
+        Ampersantul sau &amp; se foloseste la functii(se pune in fata parametrului) si inseamna ca se modifica valorile in functie.
+        <strong>Exemplu:</strong>
+        <pre class="css_cod">
+          void schimba (int &amp;a, int b)
+          {
+            a=b; //functia cand va fi apelata, se va lua valoarea lui b.
+          }
+          int main()
+          {
+            int a,b;
+            cin>>a>>b;
+            schimba(a,b);
+            cout<< a;
+          }
+        </pre> 
+      </p>
+      
+    </div>
+    <script>
+        function myFunction4() {
+    var x = document.getElementById("content-informatica4");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ <button class="btn-informatica" onclick="myFunction5()" > Functii void </button>
+    <div id="content-informatica5" style="display:none;">
+      <p class="enunt">
+        Daca o functie nu returneaza nicio valoare, sunt de tipul <i>void</i>. Functiile void pot fi fara parametri, ele cand sunt apelate afiseaza ceva (cout).
+        <strong>Sa se elaboreze o functie care citeste o matrice</strong>
+          void citire(a[][], int n, int m)
+          {
+            for(int i=1; i<=n; i++)
+              for(int j=1; j<=m; j++)
+                cin>>a[i][j];
+          }
+      </p>
+    </div>
+    <script>
+        function myFunction5() {
+    var x = document.getElementById("content-informatica5");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction6()" > Recursivitate notiune </button>
+    <div id="content-informatica6" style="display:none;">
+      <p class="enunt">
+        Spunem că o noţiune este definită recursiv, dacă în definirea ei apare însăşi noţiunea care se defineşte. <br>
+        In informatică numim recursivitate directă, proprietatea funcţiilor de a se autoapela. <br> 
+        In informatică numim recursivitate indirectă, proprietatea funcţiilor de a se autoapela prin intermediul altor funcţii. <br> <br>
+        <b>Structura unei funcţii recursive: </b> <br>
+          tip nume_funcţie(lista de parameri) <br>
+          {  //instructiuni <br>
+          if(condiţie de continuare sau de oprire) <br>
+            .......... <br>
+          nume_funcţie(lista de parametri); <br>
+            //instructiuni <br>
+          } <br>
+          Foarte important de retinut, ca trebuie sa se puna o conditie astefel incat functia sa se opreasca.
+        
+      </p>
+    </div>
+    <script>
+        function myFunction6() {
+    var x = document.getElementById("content-informatica6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction6()" >Recursive(int)</button>
+    <div id="content-informatica6" style="display:none;">
+     <p class="enunt">
+       Functiile int la nivelul de recursivitate sunt cel mai usor de inteles. <br>
+       Sa se scrie o functie recursiva care sterge toate cifrele impare dintr-un numar n. <br>
+       <pre class="css_cod">
+         int stergimp(int n)
+          {
+           if(n==0) return 0;
+            else 
+          if(n%2==1) return stergimp(n/10);
+            else 
+          return stergimp(n/10)*10+n%10;
+          }
+       </pre>
+     </p>
+    </div>
+    <script>
+        function myFunction6() {
+    var x = document.getElementById("content-informatica6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction7()" > Recursive(void)</button>
+    <div id="content-informatica7" style="display:none;">
+     <p class="enunt">
+       Sa se scrie o functie recursiva care citeste elementele unei matrici, si o functie recursiva care afiseaza elementele unei matrici. <br>
+       <pre class="css_cod">
+         void citire(int a[][], int n, int m, int i, int j)
+          {
+
+            if(i<=n)
+            {
+              cin>>A[i][j];
+            if(j< m) 
+              citire(A,n,m,i,j+1);
+            else 
+              citire(A,n,m,i+1,1);
+            }
+          }
+
+        void afisare(int A[][101], int n, int m, int i, int j)
+        {
+            if(i<=n)
+            {
+              cout<< A[i][j]<<" ";
+            if(j< m) 
+              afisare(A,n,m,i,j+1);
+            else
+            {
+              cout<< endl;
+              afisare(A,n,m,i+1,1);
+              }
+            }
+          }
+       </pre>
+     </p>
+    </div>
+    <script>
+        function myFunction7() {
+    var x = document.getElementById("content-informatica7");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+	
+</div>
+
+<a href="#quizContainer"><img src="Images/ButoaneQuiz-info.png" align="right" class="buton"></a>
+
+<div id="quizContainer" class="container-info">
+
+
+      <div class="title">Subprograme si Recursivitate Quiz</div>
+      <div id="question" class="question"></div>
+          <label class="option-info"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+      <button id="nextButton" class="next-btn-info" onclick="loadNextQuestion();">NEXT</button>
+
+    </div>
+    <div id="result" class="container-info result-infoo" style="display:none;">
+
+    </div>
+     <script src="question.js"></script>
+    
+    <script src="Scripts/quiz-subprograme.js"></script>
+
+
+
+
+</body>
+</html>

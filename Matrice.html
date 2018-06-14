@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Science Quiz</title>
+
+<link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    
+    <ul class="nav">
+        <img src="Images/Logo.jpg" width="179px" height="80px" align="left">
+        <li><a href="Index.html" class="home">HOME</a></li>
+           <div class="dropdown">
+                <button class="dropbutton">BIOLOGIE</button>
+                  <div class="dropdown-content">
+                      <a href="Botanica.html">Botanica</a>
+                      <a href="Zoologie.html">Zoologie</a>
+                      <a href="Anatomie.html">Anatomie</a>
+                      <a href="Quiz_Biologie.html">Quiz</a>
+                  </div>
+            </div>
+           <div class="dropdown">
+                <button class="dropbutton">FIZICA</button>
+                  <div class="dropdown-content">
+                      <a href="Mecanica.html">Mecanica</a>
+                      <a href="Electricitate.html">Electricitate</a>
+                      <a href="Electromagnetism.html">Electromagnetism</a>
+                      <a href="Termodinamica.html">Termodinamica</a>
+                      <a href="Optica.html">Optica</a>
+                      <a href="Quiz_Fizica.html">Quiz</a>
+                  </div>
+           </div>
+           <div class="dropdown">
+                <button class="dropbutton">CHIMIE</button>
+                  <div class="dropdown-content">
+                    <a href="Organica.html">Organica</a>
+                    <a href="Anorganica.html">Anorganica</a>
+                    <a href="Quiz_Chimie.html">Quiz</a>
+                </div>
+           </div>
+           <div class="dropdown">
+                <button class="dropbutton">INFORMATICA</button>
+                  <div class="dropdown-content">
+                    <a href="Algoritmi_elementari.html">Algoritmi elementari</a>
+                    <a href="Vectori.html">Tablouri unidimensionale[Vectori]</a>
+                    <a href="Matrice.html">Tablouri bidimensionale[Matrice]</a>
+                    <a href="Subprograme_Recursivitate.html">Subprograme[Functii] si Recursivitate</a>
+                    <a href="Siruri_de_caractere.html">Siruri de caractere[Char]</a>
+                    <a href="Grafuri.html">Grafuri</a>
+                    <a href="Quiz_Informatica.html">Quiz</a>
+                </div>
+          </div>
+         <li><a href="Contanct.html">CONTACT</a></li>
+        </div>
+    </ul>
+
+<pre>
+
+
+
+</pre>
+    <div class="citatinformatica"> <b> <i> "Exista 10 feluri de oameni in lume: cei care inteleg numerele binare si cei care nu le inteleg." </b> </i>
+        <p> - <i> citat </i> de <strong> Ian Stewart </strong> </p>
+    </div>
+    <br>
+<div class="margin_info">
+     <button class="btn-informatica" onclick="myFunction()" > Declarare</button>
+    <div id="content-informatica" style="display:none;">
+      <p class="enunt">
+        Matricea este un tablou bidimensional( adica este un vector pe un vector). <br>
+        Ea are n linii si m coloane. De obicei indicile pentru linii este i si pentru coloane este j. <br>
+        <img src="Images/matrice.jpg" align="left" width="20%" height="20%">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br> <br>
+        La fel ca si la vector, daca avem o matrice cu 100 de linii si 100 de coaloane, initializam matricea cu 1 in plus adica int a[101][101]; <br>
+        Daca numerele din matrice nu sunt intregi, vom initializa matricea float a[101][101]; (pentru numere reale).
+      
+
+      </p>
+    </div>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("content-informatica");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction2()" >Citire si afisare</button>
+    <div id="content-informatica2" style="display:none;">
+      <p class="enunt">
+        Citirea si afisarea sunt esentiale pentru a putea lucra cu matrici.
+        <pre class="css_cod">
+          int main()
+          {
+            int a[101][101],i,j,n,m;
+            //Citirea
+            cin>>n>>m;
+            for(i=1; i<=n; i++)
+              for(j=1; j<=m; j++)
+                cin>>a[i][j];
+
+            //Prelucram matricea
+
+            //Afisarea
+
+            for(i=1; i<=n; i++)
+            {
+                for(j=1; j<=m; j++)
+                  cout<< a[i][j]<<" ";
+                cout<< endl;
+            }
+          }
+        </pre>
+      </p>
+    </div>
+    <script>
+        function myFunction2() {
+    var x = document.getElementById("content-informatica2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+     <button class="btn-informatica" onclick="myFunction3()" >Suma pe linie/coloana</button>
+    <div id="content-informatica3" style="display:none;">
+      <p class="enunt">
+        Pentru a determina suma de pe o anumita linie, luam toata linia cu indice (i=2 spre exemplu) si consideram linia ca si un vector. <br>
+        <pre class="css_cod">
+          int main()
+          {
+            int a[101][101], n, m, i, j, si=0, sc=0;
+            cin>>n>>m;
+            for(i=1; i<=n; i++)
+              for(j=1; j<=m; j++)
+                cin>>a[i][j];
+            for(j=1; j<=m; j++)
+              si=si+a[2][j];
+            for(i=1; i<=m; i++)
+              sc=sc+a[i][2];
+            cout<<"Suma liniei 2 este "<< si;
+            cout<<"Suma coloanei 2 este "<< sc;
+
+            return 0;
+          }
+        </pre>
+      </p>
+    </div>
+    <script>
+        function myFunction3() {
+    var x = document.getElementById("content-informatica3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction4()" > Matricea patratica</button>
+    <div id="content-informatica4" style="display:none;">
+      <p class="enunt">
+        Într-o matrice pătratică numarul de linii= numarul de coloane (n=m). <br>
+
+        Într-o matrice pătratică avem: 
+
+             <ul style="text-align: left;"> <li> Diagonala principala elementele a[i][i], cu i=1,n sau a[i][i], cu i=0,n-1 </li> 
+             <li> Diagonala secundara elementele a[i][n-i+1], i=1,n sau a[i][n-i-1], i=0,n-1 </li>
+            </ul>
+
+          <h3 style="text-align: left;">  Zonele determinate de diagonale: </h3>
+
+<p style="text-align: left; margin-left: 50px;"> I. <br>
+Pe diagonala principală i = j <br>
+Sub diagonala principala: i > j <br>
+Deasupra diagonalei principale: i < j <br>
+II. <br>
+Pe diagonala secundară: j + i = n + 1 <br>
+Sub diagonala secundara: j + i > n + 1 <br>
+Deasupra diagonalei secundare:j + i < n + 1 <br>
+      </p>
+    </p>
+    </div>
+    <script>
+        function myFunction4() {
+    var x = document.getElementById("content-informatica4");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction5()" > Generare</button>
+    <div id="content-informatica5" style="display:none;">
+      <p class="enunt">
+        Se da o matrice patratica cu n linii si n coloane. Sa se umple matricea in felul urmator: <br>
+          -In N sa se puna 0. <br>
+          -In S sa se puna 2. <br>
+          -In E sa se puna 3. <br>
+          -In V sa se puna 4. <br>
+          -Pe diagonala principala sa se puna 1, iar pe cea secundara sa se complteze cu -1.
+          <pre class="css_cod">
+            int main()
+            {
+              int a[101][101], i, j, n;
+              cin>>n;
+
+              for(i=1; i<=n; i++)
+                for(j=1; j<=n; j++)
+                  {
+                    if(i == j)
+                        a[i][j] = 1; //Diagonala principala
+                      else
+                    if(i + j == n + 1)
+                        a[i][j] = -1; //Diagonala secundara
+                      else
+                    if(i < j &amp;&amp; j + i < n + 1)
+                        a[i][j] = 0; //In N matricei
+                      else
+                    if(i > j &amp;&amp;  j + i > n + 1)
+                        a[i][j] = 2; //In S matricei
+                      else
+                    if(i < j &amp;&amp;  j + i > n + 1)
+                        a[i][j] = 3; //In E matricei
+                      else
+                    if(i > j &amp;&amp;  j + i < n + 1)
+                        a[i][j] = 4; //In V matricei
+                  }
+
+                    for(i=1; i<=n; i++)
+                      { for(j=1; j<=n; j++)
+                        cout<< a[i][j]<<" ";
+                      cout<< endl;
+                    }
+              return 0;
+            }
+
+          </pre>
+      </p>
+    </div>
+    <script>
+        function myFunction5() {
+    var x = document.getElementById("content-informatica5");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<button class="btn-informatica" onclick="myFunction6()" > Parcurgere in spirala</button>
+    <div id="content-informatica6" style="display:none;">
+      <p class="enunt">
+        Se da un numar natural n, sa se afiseze matricea in forma de spirala.
+        <b>Exemplu: </b> <i>date.in: </i> n=4 <br>
+           <i>date.out:</i> <br> 1 2 3 4 <br>
+                        12 13 14 5 <br>
+                        11 16 15 6 <br>
+                        10 9 8 7 <br>
+
+        <pre class="css_cod">
+          
+int main()
+{
+  int a[10][10],n,i,j,k,numar,x,y,v;
+  cin>>n;
+  k=1;
+  numar=1;
+  x=1;
+  y=1;
+  v=0;
+  while (k <= n)
+  {
+    for (j=k; j<=n-k+1; j++)
+    {
+      a[x][j] = numar;
+      ++numar;
+    }
+    y=--j;
+    for (i=k+1; i<=n-k+1; i++)
+    {
+      a[i][y]=numar;
+      ++numar;
+    }
+    x=--i;
+    for(j=n-k; j>=k; j--)
+    {
+      a[x][j]=numar;
+      ++numar;
+    }
+    y=++j;
+    for (i=n-k; i>=k+1; i--)
+    {
+      a[i][y]=numar;
+      ++numar;
+    }
+    x=++i;
+    k++;
+  }
+  for(i=1; i<=n; i++)
+  {
+    for (j=1; j<=n; j++)
+      cout<< a[i][j]<<"  ";
+    cout<< endl;
+  }
+  return 0;
+}
+        </pre>
+  
+
+      </p>
+    </div>
+    <script>
+        function myFunction6() {
+    var x = document.getElementById("content-informatica6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+	</div>
+  <br>
+<a href="#quizContainer"><img src="Images/ButoaneQuiz-info.png" align="right" class="buton"></a>
+
+
+<!-- Quiz container -->
+
+
+<div id="quizContainer" class="container-info">
+
+
+      <div class="title-info">Matrice Quiz</div>
+      <div id="question" class="question-info"></div>
+          <label class="option-info"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+          <label class="option-info"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+      <button id="nextButton" class="next-btn-info" onclick="loadNextQuestion();">NEXT</button>
+
+    </div>
+    <div id="result" class="container-info result-info" style="display:none;">
+
+    </div>
+     <script src="question.js"></script>
+    
+    <script src="quiz-script.js"></script>
+
+
+
+
+
+
+</body>
+</html>
